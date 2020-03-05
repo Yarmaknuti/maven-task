@@ -72,29 +72,46 @@ src/main/java/com/test/Project.java
 			<groupId>org.codehaus.mojo</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
 		</plugin>
-	</plugins>
+		<plugin>
+			<artifactId>maven-clean-plugin</artifactId>
+			<version>2.5</version>
+			<executions>
+				<execution>
+					<id>default-clean</id>
+					<phase>clean</phase>
+					<goals>
+						<goal>clean</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+			<executions>
+				<execution>
+					<id>default-compile</id>
+					<phase>compile</phase>
+					<goals>
+						<goal>compile</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
 
-	<executions>
-		<execution>
-			<goals>
-				<goal>clean</goal>
-			</goals>
-		</execution>
-	</executions>
-	<executions>
-		<execution>
-			<goals>
-				<goal>compile</goal>
-			</goals>
-		</execution>
-	</executions>
-	<executions>
-		<execution>
-			<goals>
-				<goal>test</goal>
-			</goals>
-		</execution>
-	</executions>
+	</plugins>
 
 </build>
 </project>
