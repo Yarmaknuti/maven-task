@@ -29,7 +29,7 @@ src/main/java/com/test/Project.java
 		<version>4.11</version>
 		<scope>test</scope>
 	</dependency>
-	
+
 	<dependency>
 		<groupId>org.apache.commons</groupId>
 		<artifactId>commons-collections4</artifactId>
@@ -95,14 +95,6 @@ src/main/java/com/test/Project.java
 			</goals>
 		</execution>
 	</executions>
-	<executions>
-		<execution>
-			<goals>
-				<goal>jar</goal>
-			</goals>
-		</execution>
-	</executions>
-
 
 </build>
 </project>
