@@ -39,7 +39,7 @@ src/main/java/com/test/Project.java
 	         <build>
 		        <outputDirectory>target</outputDirectory>
 			<finalName>${maven.build.timestamp}</finalName>
-         		<sourceDirectory>src/path</sourceDirectory>
+         		<sourceDirectory>src/main/java/com/test</sourceDirectory>
                 	<resources>
 				<resource>
                     			<directory>${basedir}/src/main</directory>
