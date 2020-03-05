@@ -10,7 +10,7 @@ src/main/resources/project.properties
 src/main/java/com/test/Project.java
 -->
 
-<groupId>com</groupId>
+<groupId>srv.jenfins</groupId>
 <artifactId>projectformvn</artifactId>
 <version>0.1-SNAPSHOT</version>
 <packaging>jar</packaging>
