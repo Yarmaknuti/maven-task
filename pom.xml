@@ -56,15 +56,6 @@ src/main/java/com/test/Project.java
 	</resources>
 	<plugins>
 		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-pmd-plugin</artifactId>
-			<version>3.2.1</version>
-		</plugin>
-		<plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>sonar-maven-plugin</artifactId>
-		</plugin>
-		<plugin>
 			<artifactId>maven-clean-plugin</artifactId>
 			<version>2.5</version>
 			<executions>
@@ -76,6 +67,23 @@ src/main/java/com/test/Project.java
 					</goals>
 				</execution>
 			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.3.1</version>
+			<configuration>
+				<outputDirectory>${basedir}/artifact</outputDirectory>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.2.1</version>
+		</plugin>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
 		</plugin>
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
@@ -90,23 +98,6 @@ src/main/java/com/test/Project.java
 				</execution>
 			</executions>
 		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<version>2.3.1</version>
-			<configuration>
-				<outputDirectory>${basedir}/artifact</outputDirectory>
-			</configuration>
-			<executions>
-				<execution>
-					<id>attach-sources</id>
-					<goals>
-						<goal>jar</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
 	</plugins>
-
 </build>
 </project>
